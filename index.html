@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Document</title>
+    <title>Ремонт пральних машин</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,700;1,900&display=swap"
         rel="stylesheet">
@@ -44,7 +45,55 @@
                       </nav>
                       <a href="tel:+380631498791" class="link header__tel main ">+380631498791</a>
 
-                  </div>
+
+                      <!-- mobile menu -->
+
+                       <button data-menu-open class="button__open">
+                           <svg class="svg-open">
+                               <use href="./icons/symbol-defs.svg#icon-icon-menu"></use>
+                           </svg>
+                       </button>
+
+                        <div class="mob-menu is-hidden" data-menu>
+                            <div class="mob-menu__header">
+                                <a href="" class="mob-menu__logo">
+                                    <svg class="svg-logo">
+                                        <use href="./images/icons.svg#logo"></use>
+                                    </svg>
+                                </a>
+
+                                <button type="button" class="menu-close" data-menu-close>
+                                    <svg class="menu-close__svg" width="19" height="19">
+                                        <use href="./icons/symbol-defs.svg#icon-icon-close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="mob-menu__content">
+                                <ul class="mob-menu__navigation">
+                                    <li class="mob-menu__item">
+                                        <a class="mob-menu__link" href="#">Головна</a>
+                                    </li>
+                                    <li class="mob-menu__item">
+                                        <a class="mob-menu__link active" href="#how">Порядок роботи</a>
+                                    </li>
+                                    <li class="mob-menu__item">
+                                        <a class="mob-menu__link" href="#products">Техніка</a>
+                                    </li>
+                                    <li class="mob-menu__item">
+                                        <a class="mob-menu__link" href="#cards">Вартість</a>
+                                    </li>
+                                </ul>
+
+                               
+                            </div>
+                        </div>
+                      
+
+                       
+                        <!-- mobile menu finished -->
+                  
+                    </div>
               </div>
         </header>
         <main>
@@ -355,7 +404,7 @@
                                      <p class="prices__amount"> від 500 грн.</p>
                                  </li>
                                  <li class="prices__item">
-                                     <p class="prices__name">Замена ручки люка</p>
+                                     <p class="prices__name">Заміна ручки люка</p>
                                      <p class="prices__amount">від 400 грн.</p>
                                  </li>
                                  <li class="prices__item">
@@ -450,7 +499,7 @@
                                даємо гарантію 2 роки на будь-який наш ремонт.
                                Більше 4 років наша компанія по крихтах збирала свою репутацію чесною працею та уважним
                                ставленням
-                               до наших клієнтів. Ми завжди на зв'язку, навіть у вихідні.
+                               до наших клієнтів. Ми завжди на зв'язку, навіть у вихідні. 
 
                            </p>
                            <!-- <p class="company__description">
@@ -482,12 +531,36 @@
                 
                  </div>
             </section>
+            <section class="gallery">
+                <div class="container">
+                    <h2>Відгуки наших клієнтів</h2>
+                    <div class="swiper mySwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="./img/gallery.jpg" alt="" width="300"></li>
+                            <li class="swiper-slide"><img src="./img/gallery.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="./img/gallery.jpg" alt=""></li>
+                           
+                        </ul>
+                    </div>
+
+                    </div>
+            </section>
+            <section class="location">
+                <div class="container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.922920359512!2d30.629312315541505!3d50.40527407946917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5a9263ac0f9%3A0xf5393a195af07505!2z0L_RgNC-0YHQvy4g0J_QtdGC0YDQsCDQk9GA0LjQs9C-0YDQtdC90LrQviwgMjMsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1670189642070!5m2!1sru!2sua"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+            </section>
         </main>
         <footer>
             <h2>dlsdl</h2>
         </footer>
     </div>
-    
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/swipper.js"></script>
+    <script src="./js/mob-menu.js"></script>
     
 </body>
 </html>
