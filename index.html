@@ -114,7 +114,7 @@
 
                             <form class="contact__form contact" action="https://api.web3forms.com/submit" method="POST">
 
-                                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                                <input type="hidden" name="access_key" value="d3ffb41d-f3da-48d2-a70b-e6191773aebd">
                                 <!-- <textarea name="message" required></textarea> -->
                                 <input placeholder="Ваше Ім'я" class="contact__input-name input" type="text" name="name"
                                     required>
@@ -551,6 +551,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.922920359512!2d30.629312315541505!3d50.40527407946917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5a9263ac0f9%3A0xf5393a195af07505!2z0L_RgNC-0YHQvy4g0J_QtdGC0YDQsCDQk9GA0LjQs9C-0YDQtdC90LrQviwgMjMsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1670189642070!5m2!1sru!2sua"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     <button class="hero__button" data-modal-open type="button">Замовити послугу</button>
                     </div>
             </section>
         </main>
@@ -558,9 +559,80 @@
             <h2>dlsdl</h2>
         </footer>
     </div>
+
+     <div class="backdrop is-hidden" data-modal>
+         <div class="modal">
+             <button data-modal-close class="button-close">
+                 <svg class="close-button" width="11" height="11">
+                     <use href="./images/icons.svg#icon-icon-close"></use>
+                 </svg>
+             </button>
+             <form class="form">
+                 <p class="form-text">Залиште свої дані, ми вам передзвонимо</p>
+                 <label for="user-name" class="input-wrap">
+                     <span class="name">Ім'я</span>
+                     <span class="input-group">
+                         <input type="text" name="user-name" id="user-name" class="modal-input">
+                         <svg class="modal-svg" width="18" height="18">
+                             <use href="./images/icons.svg#icon-user-name"></use>
+                         </svg>
+                     </span>
+                 </label>
+                 <label for="user-tel" class="input-wrap">
+                     <span class="name">Телефон</span>
+                     <span class="input-group">
+                         <input type="tel" name="user-tel" id="user-tel" class="modal-input">
+                         <svg class="modal-svg" width="18" height="18">
+                             <use href="./images/icons.svg#icon-user-tel"></use>
+                         </svg>
+                     </span>
+                 </label>
+                 <label for="user-mail" class="input-wrap">
+                     <span class="name">Пошта</span>
+                     <span class="input-group">
+                         <input type="email" name="user-mail" id="user-mail" class="modal-input">
+                         <svg class="modal-svg" width="18" height="18">
+                             <use href="./images/icons.svg#icon-user-mail"></use>
+                         </svg>
+                     </span>
+                 </label>
+                 <label for="user-comment" class="input-wrap area">
+                     <span class="name">Коментар</span>
+                     <textarea class="textarea" name="user-comment" id="user-comment"
+                         placeholder="Введіть текст"></textarea>
+                 </label>
+
+
+                 <label for="check" class="input-wrap check">
+                     <input type="checkbox" value="true" name="check" id="check" class="input-check visually-hidden">
+
+                     <svg class="modal-check " width="16" height="15">
+                         <use class="unchecked" href="./images/icons.svg#icon-user-box"></use>
+                         <use class="checked" href="./images/icons.svg#icon-user-fill"></use>
+
+                     </svg>
+
+                     <span class="text-check">Погоджуюся з розсилкою та приймаю
+                         <a class="link-check" href="">Умови договору</a>
+                     </span>
+
+
+                 </label>
+
+                 <button type="submit" class="button">Відправити</button>
+             </form>
+         </div>
+     </div>
+
+
+
+
+
+
      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/swipper.js"></script>
-    <script src="./js/mob-menu.js"></script>
+    <script src="./js/swipper.js" type="module"></script>
+    <script src="./js/mob-menu.js" type="module"></script>
+    <script src="./js/modal.js" type="module"></script>
     
 </body>
 </html>
