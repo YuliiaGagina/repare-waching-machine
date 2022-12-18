@@ -133,7 +133,7 @@ header {
   margin-left: 25px;
 }
 .menu__link {
-  padding: 35px 0;
+  padding: 39px 0;
   font-size: 18px;
   font-weight: 700;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -293,6 +293,15 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.hero__phone {
+  position: fixed;
+  z-index: 10000;
+  right: 60px;
+  bottom: 18px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 4px rgb(248, 184, 7);
+          box-shadow: 2px 2px 4px rgb(248, 184, 7);
+}
 .left-hero {
   padding: 80px 0;
 }
@@ -446,6 +455,24 @@ header {
   margin-bottom: 40px;
   text-shadow: 1px 1px 1px black;
 }
+.technique__card {
+  position: absolute;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 24px;
+  font-weight: 700;
+  padding: 120px 10px;
+  text-shadow: 1px 1px 1px white;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(110, 187, 247, 0.8);
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .technique__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,6 +480,15 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
+}
+.technique__link {
+  position: relative;
+}
+.technique__link:hover .technique__card {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
 }
 .technique__link img {
   display: block;
@@ -632,9 +668,9 @@ header {
   margin-bottom: 40px;
 }
 .company__text {
-  padding: 20px;
+  padding: 50px 20px 20px;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.9;
   color: var(--white);
 }
 .company__description {
@@ -658,6 +694,37 @@ header {
 .gallery {
   padding-top: 90px;
   padding-bottom: 90px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(247, 249, 250, 0.3)), to(rgba(20, 146, 224, 0.3)));
+  background-image: linear-gradient(to right, rgba(247, 249, 250, 0.3), rgba(20, 146, 224, 0.3));
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: top;
+}
+.gallery__title {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 1px white;
+}
+
+.location {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.location__tittle {
+  font-size: 24px;
+  color: rgb(18, 14, 103);
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 1px white;
+}
+.location__map {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid grey;
 }
 
 .swiper {
@@ -687,6 +754,29 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.footer > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  background-color: var(--orange-color);
+  padding: 30px 0px;
+}
+.footer__tel {
+  font-size: 36px;
+  font-weight: 700;
+}
+.footer .menu__link.footer {
+  padding: 38px 0px;
 }
 
 .backdrop {
@@ -969,4 +1059,18 @@ header {
 .form .button:hover,
 .form .button:focus {
   background-color: var(--main-butter-hover);
+}
+
+.order__button {
+  min-width: 170px;
+  margin: 0 auto;
+  height: 60px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: var(--orange-color);
+  text-align: center;
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */

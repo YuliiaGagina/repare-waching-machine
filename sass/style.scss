@@ -167,7 +167,7 @@ header{
 		}
 
 		&__link  {
-            padding: 35px 0;
+            padding: 39px 0;
             font-size: 18px;
             font-weight: 700;
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -319,7 +319,14 @@ header{
             display: flex;
             justify-content: space-between;
 		}
-
+    &__phone{
+      position: fixed;
+      z-index: 10000;
+      right: 60px;
+      bottom: 18px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 4px rgb(248, 184, 7);
+    }
 		&__left {
 		}
 }
@@ -506,13 +513,31 @@ header{
 
 		&__tittle {
             text-align: center;
-            // padding: 15px 0;
+           
             font-family: "Bitter";
             font-size: 32px;
             color:#a9bece;
             margin-bottom: 40px;
             text-shadow: 1px 1px 1px black ;
 		}
+    &__card{
+          position: absolute;
+          transform:translateY(100%);
+          font-size: 24px;
+          font-weight: 700;
+          padding: 120px 10px;
+          text-shadow: 1px 1px 1px white ;
+          
+
+          
+          top: 0%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color:rgba(110, 187, 247, 0.8);
+          transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
 
 		&__wrapper {
 		}
@@ -520,10 +545,20 @@ header{
 		&__list {
             display: flex;
             justify-content: space-between;
+            overflow: hidden;
 		}
 
 		&__item {
 		}
+    &__link{
+      position: relative;
+      
+    }
+    &__link:hover .technique__card{
+       transform:translateY(0%);
+       opacity: 1;
+
+    }
 
 		&__link img {
             display: block;
@@ -540,6 +575,7 @@ header{
     text-shadow: 1px 1px 1px var(--white);
 
         }
+        
 }
 .container {
 }
@@ -733,9 +769,9 @@ header{
         }
 
 		&__text {
-            padding: 20px;
+          padding: 50px 20px 20px;
           font-size: 18px;
-          line-height: 1.4;
+          line-height: 1.9;
           color: var(--white);
         }
 
@@ -760,8 +796,41 @@ header{
 .gallery{
     padding-top: 90px;
     padding-bottom: 90px;
-   
+    background-image: linear-gradient(to right, rgba(247, 249, 250, 0.3), rgba(20, 146, 224, 0.3)),;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: top;
+    
 
+    &__title{
+      font-size: 24px;
+      color: black;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 1px white;
+
+    }
+  }
+// карта и другое 
+.location{
+  padding-top: 90px;
+  padding-bottom: 90px ;
+  &__tittle{
+
+      font-size: 24px;
+      color: rgb(18, 14, 103);
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 1px white;
+
+  }
+  &__map{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid grey;
+
+  }
 }
 
  .swiper {
@@ -797,6 +866,28 @@ header{
       }
 
 
+// footer
+.footer > .container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+
+}
+.footer{
+  background-color: var(--orange-color);
+  
+  padding: 30px 0px;
+  &__tel{
+     font-size: 36px;
+     font-weight: 700;
+  
+    
+  }
+  .menu__link.footer{
+    padding: 38px 0px;
+  }
+}
 
 //             modal
 
@@ -1032,4 +1123,20 @@ color: rgba(117, 117, 117, 0.5);
 .form .button:hover,
 .form .button:focus{
     background-color: var(--main-butter-hover);
+}
+//  кнопка замовити послугу
+.order__button{
+  min-width: 170px;
+  margin: 0 auto;
+  height: 60px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: var(--orange-color);
+  text-align: center;
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 20px;
+
+ 
 }
