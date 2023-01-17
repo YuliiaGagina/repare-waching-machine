@@ -88,6 +88,12 @@ main{
 
 
 .container {
+    @include mq (tablet){
+      max-width: 767px;
+      margin: 0 auto;
+      padding: 0 10px;
+
+    }
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 10px;
@@ -141,7 +147,12 @@ header{
         text-decoration: underline;
     }
     &__tel.main{
-            margin-left: auto;
+            text-align: center;
+           
+            @include mq(desctop){
+              margin-left: auto;
+            }
+           
     }
 	&__tel.mobile {
             display: none;
@@ -159,7 +170,13 @@ header{
 .menu {
 
 		&__list {
-            display: flex;
+      display: none;
+      @include mq(desctop){
+        display: flex;
+        
+      }
+      
+            
 		}
 
 		&__item + &__item {
@@ -192,6 +209,7 @@ header{
 
 }
 .button__open{
+    margin-left: 150px;
     display: block;
     @include mq(desktop){
         display: none;
@@ -316,7 +334,10 @@ header{
     min-height: 850px;
 
 		&__content {
-            display: flex;
+            @include mq(desktop){
+              display: flex;
+            }
+            
             justify-content: space-between;
 		}
     &__phone{
@@ -331,7 +352,11 @@ header{
 		}
 }
 .left-hero {
-    padding: 80px 0;
+    padding: 40px 0;
+    @include mq(desktop){
+      padding: 80px 0;
+    }
+   
 
 		&__tittle {
             font-size: 48px;
@@ -342,6 +367,10 @@ header{
         }
 
 		&__list {
+      display: none;
+    @include mq (desktop){
+     display: block;
+    }
 		}
 
 		&__item {
@@ -378,8 +407,12 @@ header{
 }
 .contact {
 
-		&__form {
-            padding: 100px 0;
+		&__form{
+      margin-left: 100px ;
+            @include mq(desctop){
+              padding: 100px 0;
+            }
+          
         }
         &__input-name{
             display: block;
@@ -440,9 +473,12 @@ header{
 // -------------warning-------------------
 
 .warning {
-    position: absolute;
-    top: 80%;
-    left: 20%;
+    margin-top: -250px;
+    position: relative;
+    z-index: 20;
+    // position: absolute;
+    // top: 75%;
+    // left: 20%;
 
 
 		&__tittle {
@@ -457,8 +493,16 @@ header{
 		}
 
 		&__content {
-            display: flex;
-            justify-content: space-between;
+      display: flex;
+      gap:20px;
+      flex-wrap: wrap;
+      justify-content: center;
+            @include mq (desktop){
+              flex-wrap: nowrap;
+              justify-content: space-between;
+            }
+           
+           
 		}
 
 		&__lastimg {
@@ -467,16 +511,23 @@ header{
 .container {
 }
 .content {
+  &__item.second{
+    order: 2;
+  }
 
 		&__item {
             width: 320px;
 		}
+    &__item.last{
+      order: 1;
+    }
 }
 .list {
 }
 .item {
 }
 .image{
+  
     max-width: 100%;
     object-fit: cover;
 }
@@ -484,6 +535,7 @@ header{
 
 
 	&__container {
+    margin: 0 auto;
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -508,8 +560,13 @@ header{
 // -----------technique--------------
 
 .technique {
-    padding-top: 240px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include mq (desktop){
+      padding-top: 240px;
     padding-bottom: 90px;
+    }
+    
 
 		&__tittle {
             text-align: center;
@@ -523,9 +580,11 @@ header{
     &__card{
           position: absolute;
           transform:translateY(100%);
+          opacity: 0;
           font-size: 24px;
           font-weight: 700;
           padding: 120px 10px;
+          color:rgb(248, 184, 7);
           text-shadow: 1px 1px 1px white ;
           
 
@@ -543,12 +602,25 @@ header{
 		}
 
 		&__list {
-            display: flex;
-            justify-content: space-between;
+      background-image: url(../icons/warning/fon.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+            
+            
+           
             overflow: hidden;
+            @include mq (desktop){
+              justify-content: space-between;
+              display: flex;
+            }
 		}
 
 		&__item {
+   
+      width: 250px;
+      margin: 0 auto;
+      margin-bottom: 20px;
 		}
     &__link{
       position: relative;
@@ -614,10 +686,15 @@ header{
 .container {
 }
 .work-list {
+    flex-wrap: wrap;
     display: flex;
     gap: 30px;
+    @include mq(desktop){
+      flex-wrap: nowrap;
+    }
 
 		&__item {
+      width: 350px;
 		}
 
 		&__text {
@@ -638,9 +715,15 @@ header{
 }
 // --------brands----------
 .brands {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include mq (desktop){
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+    
     &__list{
+      
         display: flex;
         flex-wrap:wrap;
         justify-content: center;
@@ -671,12 +754,20 @@ header{
 }
 // -------prices---------
 .prices-waching {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include mq(desktop){
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+    
     &__container{
-        display: flex;
-        align-items: center;
-        gap: 40px;
+        
+        @include mq (desktop){
+          display: flex;
+          align-items: center;
+          gap: 40px;
+        }
     }
     &__description{
         margin: 0 auto;
@@ -684,6 +775,9 @@ header{
         color: var(--black);
         line-height: 1.3;
     }
+.wrapper__first{
+  margin-bottom: 70px;
+}
 
 }
 .prices {
@@ -719,6 +813,8 @@ header{
         }
 
 		&__list {
+      margin-bottom: 30px;
+      margin: 0 auto;
             width: 550px;
             height: auto;
             border-radius: 10px;
@@ -730,9 +826,10 @@ header{
             margin-top: 20px;
         }
         &__item:nth-child(2n){
-            background-color: var(--orange-color);
+            background-color: rgb(234, 175, 65);
         }
 		&__item {
+    
             display: flex;
             justify-content: space-between;
             padding: 5px;
@@ -752,8 +849,13 @@ header{
 // ------------company--------------
 
 .company {
-    padding-top: 90px;
-    padding-bottom: 90px;
+  padding-top: 40px;
+    padding-bottom: 40px;
+    @include mq(desktop){
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+   
     background-color: var(--main-blue-color);
 
 		&__tittle {
@@ -783,6 +885,7 @@ header{
 		}
     &__content{
         display: flex;
+        flex-wrap: wrap;
         gap: 40px;
     }
     &__img{
@@ -881,6 +984,7 @@ header{
   &__tel{
      font-size: 36px;
      font-weight: 700;
+     margin-right: auto;
   
     
   }
