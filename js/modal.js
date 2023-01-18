@@ -6,6 +6,7 @@
     modal: document.querySelector("[data-modal]"),
     formEl: document.querySelector('.form'),
     backdropEl: document.querySelector('.backdrop'),
+    iconlistEl: document.querySelector('.icon-list'),
   };
 
   refs.backdropEl.addEventListener('click', (e)=>{
@@ -23,4 +24,10 @@
     
     refs.modal.classList.toggle("is-hidden");
   }
+
+
+setTimeout(()=>{
+  refs.iconlistEl.style.transform = 'translateX(20%)';
+}, 5000)
+
 })();
