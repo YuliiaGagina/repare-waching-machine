@@ -104,7 +104,7 @@
                             <h1 class="left-hero__tittle">Швидкий та якісний ремонт Вашої пральної машини.</h1>
                             <ul class="left-hero__list list">
                                 <li class="left-hero__item item">Швидкий виклик</li>
-                                <li class="left-hero__item item">Гарантія на всі види робот</li>
+                                <li class="left-hero__item item">Гарантія на всі види робіт</li>
                                 <li class="left-hero__item item">Якісні запчастини</li>
                                 <li class="left-hero__item item">Кращі майстри</li>
 
@@ -119,7 +119,8 @@
                                 <input placeholder="Ваше Ім'я" class="contact__input-name input" type="text" name="name"
                                     required>
                                 <input placeholder="Телефон" class="contact__input-tel input" type="tel" name="tel" required>
-                                <input type="hidden" name="redirect" value="https://yuliiagagina.github.io/repare-waching-machine/">
+                                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                                
 
                                 <button target="_blank" class="contact__button" type="submit">Замовити дзвінок</button>
 
@@ -157,7 +158,7 @@
                             </div>
                             <h3 class="connent__subtittle">Вібрує пральна машина</h3>
                             <p class="connent__text">Можливо у вас засор. Для цього знизу у машинці треба
-                                відкрутитити кришку злтвного фільтру</p>
+                                відкрутитити кришку зливного фільтру</p>
                         </li>
 
                     </ul>
@@ -227,7 +228,7 @@
                             </li>
                             <li class="work-list__item item"><img class="cards " src="./icons/benefits/repare.png" width="100"
                                     alt="Гарантійний ремонт">
-                                <p class="work-list__text">Ви отримуєте гарантійний ремонт вашої машини у найкротчі сроки.</p>
+                                <p class="work-list__text">Ви отримуєте гарантійний ремонт вашої машини у найкоротший термін.</p>
                             </li>
                         </ul>
                     </div>
@@ -524,6 +525,7 @@
                            
                         </ul>
                     </div>
+                    <button class="order__button" data-modal-open type="button">Замовити послугу</button>
 
                     </div>
             </section>
@@ -570,13 +572,14 @@
                      <use href="./images/icons.svg#icon-icon-close"></use>
                  </svg>
              </button>
-             <form class="form">
-                 <p class="form-text">Залиште свої дані, ми вам передзвонимо</p>
+             <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                 <p class="form-text">Залиште свої дані, ми вам передзвонимо, або залиште коментар</p>
+                 <input type="hidden" name="access_key" value="d3ffb41d-f3da-48d2-a70b-e6191773aebd">
                  <label for="user-name" class="input-wrap">
                      <span class="name">Ім'я</span>
                      <span class="input-group">
                          <input type="text" name="user-name" id="user-name" class="modal-input">
-                         <svg class="modal-svg" width="18" height="18">
+                         <svg class="modal-svg" width="18" height="18" required>
                              <use href="./images/icons.svg#icon-user-name"></use>
                          </svg>
                      </span>
@@ -590,37 +593,12 @@
                          </svg>
                      </span>
                  </label>
-                 <label for="user-mail" class="input-wrap">
-                     <span class="name">Пошта</span>
-                     <span class="input-group">
-                         <input type="email" name="user-mail" id="user-mail" class="modal-input">
-                         <svg class="modal-svg" width="18" height="18">
-                             <use href="./images/icons.svg#icon-user-mail"></use>
-                         </svg>
-                     </span>
-                 </label>
-                 <label for="user-comment" class="input-wrap area">
+               <label for="user-comment" class="input-wrap area">
                      <span class="name">Коментар</span>
                      <textarea class="textarea" name="user-comment" id="user-comment"
                          placeholder="Введіть текст"></textarea>
                  </label>
-
-
-                 <label for="check" class="input-wrap check">
-                     <input type="checkbox" value="true" name="check" id="check" class="input-check visually-hidden">
-
-                     <svg class="modal-check " width="16" height="15">
-                         <use class="unchecked" href="./images/icons.svg#icon-user-box"></use>
-                         <use class="checked" href="./images/icons.svg#icon-user-fill"></use>
-
-                     </svg>
-
-                     <span class="text-check">Погоджуюся з розсилкою та приймаю
-                         <a class="link-check" href="">Умови договору</a>
-                     </span>
-
-
-                 </label>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
                  <button type="submit" class="button">Відправити</button>
              </form>
@@ -630,6 +608,7 @@
 
 
      <!-- Вторая модалка  -->
+   
 
 
 

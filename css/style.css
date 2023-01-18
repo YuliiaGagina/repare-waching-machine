@@ -124,6 +124,8 @@ header {
   }
 }
 .header__tel {
+  font-size: 18px;
+  font-weight: 700;
   padding: 35px 0;
   font-size: 16px;
   color: var(--orange-color);
@@ -570,7 +572,7 @@ header {
 }
 
 .technique {
-  background-image: url(../icons/warning/fon.png);
+  background-image: url(../icons/warning/fon.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1049,6 +1051,11 @@ header {
     min-height: 609px;
   }
 }
+@media screen and (min-width: 768px) {
+  .modal {
+    height: auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1091,11 +1098,11 @@ header {
 /* --------form-modal */
 .form-text {
   color: var(--main-color-tittle);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .input-wrap {

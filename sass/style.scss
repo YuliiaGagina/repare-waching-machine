@@ -152,6 +152,9 @@ header{
 		}
 
 	&__tel{
+    font-size: 18px;
+        font-weight: 700;
+
       @include mq(tablet){
         font-size: 26px;
         font-weight: 700;
@@ -615,10 +618,12 @@ header{
 // -----------technique--------------
 
 .technique {
-  background-image: url(../icons/warning/fon.png);
+  background-image: url(../icons/warning/fon.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ 
+ 
   
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1129,6 +1134,9 @@ header{
         min-height: 609px;
 
     }
+    @include mq(tablet){
+      height: auto;
+    }
     @include mq(desktop){
         width: 528px;
         min-height: 450px;
@@ -1167,11 +1175,11 @@ header{
 .form-text{
     color: var(--main-color-tittle);
 
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 
 
 }
