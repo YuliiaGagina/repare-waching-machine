@@ -675,6 +675,17 @@ header {
   text-align: center;
   font-size: 18px;
   line-height: 1.4;
+  margin-bottom: 20px;
+}
+.work__text2 {
+  font-family: "Bitter";
+  font-weight: 700;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgb(167, 25, 25);
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.4;
   margin-bottom: 60px;
 }
 
@@ -685,6 +696,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 1200px) {
   .work-list {
@@ -913,10 +925,26 @@ header {
 }
 .gallery__title {
   font-size: 24px;
-  color: black;
+  color: rgb(18, 14, 103);
   text-align: center;
   margin-bottom: 40px;
   text-shadow: 1px 1px 1px white;
+}
+.gallery__button.order__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-left: auto;
+}
+.gallery .swiper {
+  margin-bottom: 40px;
 }
 
 .location {
@@ -1028,6 +1056,7 @@ header {
 }
 
 .modal {
+  overflow: auto;
   position: absolute;
   z-index: 100;
   left: 50%;
