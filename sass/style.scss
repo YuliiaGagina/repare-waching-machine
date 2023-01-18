@@ -240,6 +240,7 @@ header{
 
 }
 .button__open{
+  background-color: var(--orange-color);
   display: block;
   margin-left: auto;
   @include mq (tablet){
@@ -256,16 +257,12 @@ header{
 .no-scroll {
   overflow: hidden;
 }
-    // .button-open {
+    .button-open {
 
-    //   border: none;
-    //   margin-left: auto;
-    //   display: none;
-
-    //   @include mq(desktop) {
-    //     display: none;
-    //   }
-    // }
+      border: none;
+      background-color:#ff9c19;
+     
+    }
 
 .mob-menu {
   position: fixed;
@@ -277,8 +274,12 @@ header{
 
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/Epoca.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-  background-color: var(--main-blue-color);
+  // background-color: var(--main-blue-color);
   transform: translateX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -542,7 +543,7 @@ header{
     margin: 0 auto;
       font-size: 22px;
     max-width: 700px;
-    color: rgb(210, 20, 20);
+    color: var(--white);
     margin-bottom: 40px;
     text-shadow: 0px 2px 2px black;
     @include mq(tablet){
