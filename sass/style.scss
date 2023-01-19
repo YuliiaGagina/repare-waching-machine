@@ -59,8 +59,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 img{
     display:block;
-    // width: 100%;
-    // max-width: 100%;
+    width: 100%;
+    
     height: auto;
 }
 
@@ -379,9 +379,8 @@ header{
             justify-content: space-between;
 		}
     &__phone{
-     
-      
-        
+        width:70px;
+        height: 70px;
         position: fixed;
         z-index: 10000;
         right: 10px;
@@ -395,6 +394,7 @@ header{
      
     }
     .bounce-in-top {
+      width: 70px;
       -webkit-animation: bounce-in-top 3s linear 1.5s forwards;
               animation: bounce-in-top 3s linear 1.5s forwards;
     }
@@ -755,7 +755,7 @@ header{
          font-weight: 700;
          max-width: 800px;
          margin: 0 auto;
-         color: rgb(167, 25, 25);
+         color: var(--white);
          text-align: center;
          font-size: 24px;
          line-height: 1.4;
