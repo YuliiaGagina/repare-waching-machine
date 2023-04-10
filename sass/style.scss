@@ -143,7 +143,11 @@ header{
         
         }
     &__logo {
-          margin-right: 60px;
+      margin-right: 20px;
+          @include mq(mobile){
+            margin-right: 60px;
+          }
+         
           // margin-right: 50px;
           @include mq(desktop){
             margin-right: 150px;
@@ -243,7 +247,13 @@ header{
   border: none;
   background-color: var(--orange-color);
   display: block;
+  // margin-left: 50px;
   margin-left: auto;
+  @include mq(mibile){
+  margin-left: auto;
+
+  }
+
   @include mq (tablet){
     margin-left: auto;
   }
@@ -379,12 +389,13 @@ header{
             justify-content: space-between;
 		}
     &__phone{
+     
         width:70px;
         height: 70px;
         position: fixed;
         z-index: 10000;
-        right: 10px;
-        bottom: 18px;
+        right: 23px;
+        bottom: 60px;
         border-radius: 50%;
         box-shadow: 2px 2px 4px rgb(248, 184, 7);
         @include mq (desktop){
@@ -508,8 +519,8 @@ header{
 
 		&__button {
             display: inline-block;
-            min-width: 210px;
-            padding: 15px 15px;
+            // min-width: 210px;
+            padding: 15px 6px;
             background-color:chocolate;
             border:none;
             border-radius: 10px;
@@ -517,7 +528,7 @@ header{
             font-size: 20px;
             color: white;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 400;
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 		}
         &__button:hover,
@@ -610,6 +621,7 @@ header{
 .connent {
 
 		&__subtittle {
+            text-align: center;
             font-size: 18px;
             margin-bottom: 15px;
             color:red;
@@ -618,6 +630,8 @@ header{
 
 		&__text {
             font-size: 20px;
+            text-align: center;
+
 		}
 }
 // -----------technique--------------
@@ -649,24 +663,32 @@ header{
 		}
     &__card{
           position: absolute;
-          transform:translateY(100%);
+           transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+             
+         
+          transform:translateY(-100%);
           opacity: 0;
-          font-size: 24px;
-          font-weight: 700;
-          padding: 120px 10px;
-          color:rgb(248, 184, 7);
-          text-shadow: 1px 1px 1px white ;
+          font-size: 18px;
+          text-align: center;
+          font-weight: 500;
+          padding: 20px 10px;
+          color:rgb(247, 246, 244);
+          text-shadow: 1px 1px 1px rgb(230, 177, 17) ;
           
 
-          
-          top: 0%;
+        
+          top: 0;
           left: 0;
           width: 100%;
-          height: 100%;
-          background-color:rgba(110, 187, 247, 0.8);
-          transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+          height: 100px;
+          background-color:rgba(3, 3, 3, 0.8);
+
+          
+       
+         
 
         }
+      
 
 		&__wrapper {
 		}
@@ -694,7 +716,7 @@ header{
       
     }
     &__link:hover .technique__card{
-       transform:translateY(0%);
+       transform:translateY(100%);
        opacity: 1;
 
     }
@@ -766,6 +788,7 @@ header{
 .container {
 }
 .work-list {
+  justify-content: center;
     flex-wrap: wrap;
     display: flex;
     gap: 30px;
@@ -900,7 +923,15 @@ header{
         }
 
 		&__list {
-      margin-bottom: 30px;
+      width: 320px;
+        height: auto;
+            border-radius: 10px;
+            background-color: var(--main-blue-color);
+            padding: 20px;
+            box-shadow: 2px 7px 14px 3px rgba(0,0,0,0.59);
+            margin: 0 auto;
+      @include mq(mobile){
+          margin-bottom: 30px;
       margin: 0 auto;
             width: 400px;
             height: auto;
@@ -908,6 +939,9 @@ header{
             background-color: var(--main-blue-color);
             padding: 20px;
             box-shadow: 2px 7px 14px 3px rgba(0,0,0,0.59);
+
+      }
+    
             @include mq(tablet){
               width: 550px;
 
@@ -956,11 +990,13 @@ header{
             margin-bottom: 40px;
 		}
         &__left{
-           
+           opacity: 0;
            
        
         }
-
+         &__left.slide-out-right{
+          opacity: 1;
+         }
 		&__text {
           padding: 50px 20px 20px;
           font-size: 18px;
@@ -984,11 +1020,17 @@ header{
         
     }
     &__img{
-      margin: 0 auto;
-        width: 380px;
-        display: block;
+      width: 320px;
+              display: block;
         border-radius: 5px;
          border-radius: 15% 50% 20% 0%;
+      @include mq(mobile){
+         margin: 0 auto;
+        width: 380px;
+
+
+      }
+     
          @include mq(teblet){
           width :475px;
           height: 428px;
@@ -1000,6 +1042,9 @@ header{
 }
 
 // gallery
+.order__button:hover,.order__button:focus{
+      border: 2px solid black;
+     }
 .gallery{
     padding-top: 90px;
     padding-bottom: 90px;
@@ -1024,9 +1069,51 @@ header{
       align-items:center;
       text-align: center;
       margin-left: auto;
+      
     }
+     &__button.order__button:hover, &__button.order__button:focus{
+      border: 2px solid black;
+     }
+  
     .swiper{
       margin-bottom: 40px;
+    }
+    // .swiper-slide{
+    //   width: 300px;
+    //    @include mq(mobile){
+    //     width: 430px;
+    //    padding: 20px;
+    //    }
+    //    @include mq(tablet){
+    //      width: 630px;
+    //    }
+    //     @include mq(desktop){
+    //      width: 900px;
+    //    }
+    // }
+    
+    .swiper-text{
+      text-align: start;
+      width: 300px;
+      height: auto;
+       padding-left: 25px;
+       margin: 5px;
+       overflow: hidden;
+       @include mq(mobile){
+        text-align: center;
+        width: 430px;
+      //  padding: 15px;
+       padding-left: 10px;
+       padding-right: 10px;
+       }
+       @include mq(tablet){
+         width: 630px;
+          // padding: 15px;
+
+       }
+        @include mq(desktop){
+         width: 900px;
+       }
     }
   }
 // карта и другое 
@@ -1043,6 +1130,7 @@ header{
 
   }
   &__map{
+    width: auto;
     display: block;
     margin: 0 auto;
     border: 2px solid grey;
@@ -1056,8 +1144,27 @@ header{
 }
 
  .swiper {
-        width: 400px;
-        height: 400px;
+  border-radius:20px;
+
+         width: 320px;
+          height: 500px;
+         padding-left: 10px;
+         padding-right: 10px;
+       @include mq(mobile){
+        width: 430px;
+          padding-left: 20px;
+         padding-right: 20px;
+         height: 400px;
+       }
+       @include mq(tablet){
+         width: 630px;
+        padding-left: 20px;
+         padding-right: 20px;
+       }
+        @include mq(desktop){
+         width: 1100px;
+       }
+       
       }
 
       .swiper-slide {
@@ -1086,6 +1193,17 @@ header{
         height: 100%;
         object-fit: cover;
       }
+      .swiper-button-prev{
+        @include mq(mobile){
+ margin-left: 10px;
+        }
+       
+      }
+      .swiper-button-next{
+              @include mq(mobile){
+ margin-left: 10px;
+        }
+      }
 
 
 // footer
@@ -1110,6 +1228,10 @@ header{
   
     
   }
+    &__tel:hover,&__tel:focus{
+      text-decoration: underline;
+      color: var(--hover-color);
+    }
   .menu__link.footer{
     padding: 38px 0px;
   }
@@ -1378,6 +1500,7 @@ color: rgba(117, 117, 117, 0.5);
   position: fixed;
   top: 60%;
   width: 70px;
+  z-index: 20;
  
   // border: 1px solid grey;
   // background-color: rgba(40, 234, 248, 0.7);
@@ -1397,3 +1520,43 @@ color: rgba(117, 117, 117, 0.5);
  * ---------------------------------------------- */
 
  @-webkit-keyframes bounce-in-top{0%{-webkit-transform:translateY(-500px);transform:translateY(-500px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:translateY(-65px);transform:translateY(-65px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:translateY(-28px);transform:translateY(-28px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}90%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:translateY(-8px);transform:translateY(-8px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes bounce-in-top{0%{-webkit-transform:translateY(-500px);transform:translateY(-500px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:translateY(-65px);transform:translateY(-65px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:translateY(-28px);transform:translateY(-28px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}90%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:translateY(-8px);transform:translateY(-8px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
+
+//  animation for some blocks
+.box,.boxsecond {
+  opacity: 0;
+ 
+}
+.box.slide-out-right, .boxsecond.slide-out-left{
+  opacity: 1;
+  
+}
+
+.slide-out-right {
+  animation-name: slide-out-right;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(-400%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.slide-out-left {
+  animation-name: slide-out-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(400%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

@@ -1,24 +1,33 @@
-// var swiperGallary = new Swiper('.mySwiper', {
- 
-// });
+const box = document.querySelector('.block');
+const boxSecond = document.querySelector('.boxsecond');
 
-// var swiperReviews = new Swiper('.newSwiper', {
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
+window.addEventListener('scroll', () => {
+  const boxPosition = box.getBoundingClientRect().top;
+  const secondPosition = boxSecond.getBoundingClientRect().top;
 
+  const viewportHeight = window.innerHeight;
 
-var swiper = new Swiper(".mySwiper", {
-     pagination: {
+  if (boxPosition < viewportHeight / 2 || secondPosition < viewportHeight / 2) {
+    box.classList.add('slide-out-right');
+    boxSecond.classList.add('slide-out-left');
+  } else {
+    box.classList.remove('slide-out-right');
+    boxSecond.classList.remove('slide-out-left');
+  }
+});
+
+const swiper = new Swiper('.mySwiper', {
+  pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    type: 'fraction',
   },
   loop: true,
+
   scrollbar: {
     el: '.swiper-scrollbar',
-    draggable: true,
+    // el: '.swiper-scrollbar',
+    // draggable: true,
   },
 
   navigation: {

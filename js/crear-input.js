@@ -1,8 +1,7 @@
+// const userFormEl = document.querySelector('.contact__form');
 
-const userFormEl = document.querySelector('.contact__form');
+// userFormEl.addEventListener('submit', (e) => {
 
-userFormEl.addEventListener('submit', (e) => {
-    
-    userFormEl.reset();
+//     userFormEl.reset();
 
-});
+// });
