@@ -165,7 +165,7 @@ header{
       }
         padding: 35px 0;
         font-size: 16px;
-        color: var(--orange-color);
+        color: var(--white);
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     &__tel:hover,
@@ -366,7 +366,29 @@ header{
 // mobile menu finished
 
 // --------hero---------------------
+.rolling{
+  padding-top:5px;
+  height:35px;
+   padding-bottom:5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  font-size: 14px;
+  @include mq(tablet){
+     font-size: 28px;
+      padding-top:10px;
+  height:45px;
+   padding-bottom:10px;
+  }
+}
+.star{
+  color:var(--orange-color);
+  font-size:24px;
+  @include mq(tablet){
+    font-size:28px;
+  }
+ 
 
+}
 .section {
 }
 .hero {
@@ -395,7 +417,7 @@ header{
         position: fixed;
         z-index: 10000;
         right: 23px;
-        bottom: 60px;
+        bottom: 20px;
         border-radius: 50%;
         box-shadow: 2px 2px 4px rgb(248, 184, 7);
         @include mq (desktop){
@@ -541,12 +563,12 @@ header{
 // -------------warning-------------------
 
 .warning {
-    margin-top: -250px;
+  
+    padding-top: 50px;;
     position: relative;
     z-index: 20;
-    // position: absolute;
-    // top: 75%;
-    // left: 20%;
+    padding-bottom: 50px;
+   
 
 
 		&__tittle {
@@ -554,8 +576,8 @@ header{
     text-align: center;
     margin: 0 auto;
       font-size: 22px;
-    max-width: 700px;
-    color: var(--white);
+    
+    color: var(--hover-color);
     margin-bottom: 40px;
     text-shadow: 0px 2px 2px black;
     @include mq(tablet){
@@ -1077,6 +1099,15 @@ header{
   
     .swiper{
       margin-bottom: 40px;
+      position: relative;
+       @include mq(tablet){
+         width: 685px;
+       }
+        @include mq(desktop){
+         width: 1100px;
+         height: 500px;
+       }
+
     }
     // .swiper-slide{
     //   width: 300px;
@@ -1091,28 +1122,31 @@ header{
     //      width: 900px;
     //    }
     // }
-    
+    .face{
+      width: 140px;
+    }
     .swiper-text{
       text-align: start;
-      width: 300px;
+      // width: 300px;
       height: auto;
        padding-left: 25px;
        margin: 5px;
        overflow: hidden;
        @include mq(mobile){
         text-align: center;
-        width: 430px;
+        // width: 430px;
       //  padding: 15px;
        padding-left: 10px;
        padding-right: 10px;
        }
        @include mq(tablet){
+        font-size: 22px;
          width: 630px;
           // padding: 15px;
 
        }
         @include mq(desktop){
-         width: 900px;
+        font-size: 28px;
        }
     }
   }
@@ -1145,13 +1179,16 @@ header{
 
  .swiper {
   border-radius:20px;
+  
+ 
 
          width: 320px;
-          height: 500px;
+          height: 450px;
          padding-left: 10px;
          padding-right: 10px;
        @include mq(mobile){
-        width: 430px;
+        //  height: 300px;  
+        width: 450px;
           padding-left: 20px;
          padding-right: 20px;
          height: 400px;
@@ -1168,6 +1205,12 @@ header{
       }
 
       .swiper-slide {
+        display :flex;
+        flex-direction: column;
+        gap: 50px;
+        
+        align-items:center;
+        justify-content: center;
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -1194,12 +1237,19 @@ header{
         object-fit: cover;
       }
       .swiper-button-prev{
+        position: absolute;
+        left: 10px;
+        top: 105px;
         @include mq(mobile){
  margin-left: 10px;
         }
        
       }
       .swiper-button-next{
+        position: absolute;
+        right: 19px;
+        top: 105px;
+
               @include mq(mobile){
  margin-left: 10px;
         }
@@ -1533,7 +1583,7 @@ color: rgba(117, 117, 117, 0.5);
 
 .slide-out-right {
   animation-name: slide-out-right;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 
@@ -1548,7 +1598,7 @@ color: rgba(117, 117, 117, 0.5);
 
 .slide-out-left {
   animation-name: slide-out-left;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 

@@ -134,7 +134,7 @@ header {
   font-weight: 700;
   padding: 35px 0;
   font-size: 16px;
-  color: var(--orange-color);
+  color: var(--white);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -345,6 +345,33 @@ header {
           transform: translateX(-100%);
 }
 
+.rolling {
+  padding-top: 5px;
+  height: 35px;
+  padding-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .rolling {
+    font-size: 28px;
+    padding-top: 10px;
+    height: 45px;
+    padding-bottom: 10px;
+  }
+}
+
+.star {
+  color: var(--orange-color);
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .star {
+    font-size: 28px;
+  }
+}
+
 .hero {
   position: relative;
   padding-top: 100px;
@@ -376,7 +403,7 @@ header {
   position: fixed;
   z-index: 10000;
   right: 23px;
-  bottom: 60px;
+  bottom: 20px;
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 4px rgb(248, 184, 7);
           box-shadow: 2px 2px 4px rgb(248, 184, 7);
@@ -512,16 +539,16 @@ header {
 }
 
 .warning {
-  margin-top: -250px;
+  padding-top: 50px;
   position: relative;
   z-index: 20;
+  padding-bottom: 50px;
 }
 .warning__tittle {
   text-align: center;
   margin: 0 auto;
   font-size: 22px;
-  max-width: 700px;
-  color: var(--white);
+  color: var(--hover-color);
   margin-bottom: 40px;
   text-shadow: 0px 2px 2px black;
 }
@@ -1006,10 +1033,24 @@ header {
 }
 .gallery .swiper {
   margin-bottom: 40px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .gallery .swiper {
+    width: 685px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery .swiper {
+    width: 1100px;
+    height: 500px;
+  }
+}
+.gallery .face {
+  width: 140px;
 }
 .gallery .swiper-text {
   text-align: start;
-  width: 300px;
   height: auto;
   padding-left: 25px;
   margin: 5px;
@@ -1018,19 +1059,19 @@ header {
 @media screen and (min-width: 480px) {
   .gallery .swiper-text {
     text-align: center;
-    width: 430px;
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 @media screen and (min-width: 768px) {
   .gallery .swiper-text {
+    font-size: 22px;
     width: 630px;
   }
 }
 @media screen and (min-width: 1200px) {
   .gallery .swiper-text {
-    width: 900px;
+    font-size: 28px;
   }
 }
 
@@ -1061,13 +1102,13 @@ header {
 .swiper {
   border-radius: 20px;
   width: 320px;
-  height: 500px;
+  height: 450px;
   padding-left: 10px;
   padding-right: 10px;
 }
 @media screen and (min-width: 480px) {
   .swiper {
-    width: 430px;
+    width: 450px;
     padding-left: 20px;
     padding-right: 20px;
     height: 400px;
@@ -1087,6 +1128,14 @@ header {
 }
 
 .swiper-slide {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -1110,12 +1159,22 @@ header {
      object-fit: cover;
 }
 
+.swiper-button-prev {
+  position: absolute;
+  left: 10px;
+  top: 105px;
+}
 @media screen and (min-width: 480px) {
   .swiper-button-prev {
     margin-left: 10px;
   }
 }
 
+.swiper-button-next {
+  position: absolute;
+  right: 19px;
+  top: 105px;
+}
 @media screen and (min-width: 480px) {
   .swiper-button-next {
     margin-left: 10px;
@@ -1597,8 +1656,8 @@ header {
 .slide-out-right {
   -webkit-animation-name: slide-out-right;
           animation-name: slide-out-right;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
@@ -1627,8 +1686,8 @@ header {
 .slide-out-left {
   -webkit-animation-name: slide-out-left;
           animation-name: slide-out-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }

@@ -22,6 +22,7 @@ const swiper = new Swiper('.mySwiper', {
     clickable: true,
     type: 'fraction',
   },
+  spaceBetween: 100,
   loop: true,
 
   scrollbar: {
