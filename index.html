@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link type="image/x-icon" href="./icons/warning/machine.jpg" rel="shortcut icon">
     <title>Ремонт пральних машин</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,700;1,900&display=swap"
         rel="stylesheet">
@@ -43,6 +43,9 @@
                                 </li>
                                 <li class="menu__item">
                                     <a href="#techique" class="menu__link link">Техніка</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#rpm" class="menu__link link">РПМ</a>
                                 </li>
 
 
@@ -110,13 +113,17 @@
         </header>
         <main>
             <section class="section hero">
-                <marquee class="rolling" behavior="scroll" direction="left">
-                    Ремонтуємо більше 7 років!
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    Гарантія на всі види робіт!
-                </marquee>
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <p class="marquee__line">
+                            Ремонтуємо більше 7 років!
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            Гарантія на всі види робіт!
+                        </p>
+                    </div>
+                </div>
                 <div class="container">
 
                     <div class="hero__content">
@@ -524,7 +531,7 @@
 
                 </div>
             </section>
-            <section class="company">
+            <section id="rpm" class="company">
                 <div class="container">
                     <h2 class="company__tittle">Компанія Ремонт Пральних Машин</h2>
                     <div class="company__content">

@@ -366,7 +366,11 @@ header{
 // mobile menu finished
 
 // --------hero---------------------
-.rolling{
+.marquee{
+  // overflow: hidden;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
   padding-top:5px;
   height:35px;
    padding-bottom:5px;
@@ -378,6 +382,29 @@ header{
       padding-top:10px;
   height:45px;
    padding-bottom:10px;
+  }
+}
+.marquee__inner{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.marquee__line{
+  flex-shrink: 0;
+margin: 0;
+min-width: 100%; white-space: nowrap;
+animation-name: marqueeLine; animation-duration: 20s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+  
+  to {
+    transform: translateX(-100%);
   }
 }
 .star{
@@ -402,6 +429,9 @@ header{
     object-fit: cover;
     background-position: top;
     min-height: 850px;
+    @include mq(desktop){
+       min-height: 1000px;
+    }
 
 		&__content {
             @include mq(desktop){
@@ -660,9 +690,9 @@ header{
 
 .technique {
   background-image: url(../icons/warning/fon.svg);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
  
  
   
@@ -679,9 +709,9 @@ header{
            
             font-family: "Bitter";
             font-size: 32px;
-            color:#7db5e0;
+            color:var(--black);
             margin-bottom: 40px;
-            text-shadow: 1px 1px 1px black ;
+            text-shadow: 1px 1px 1px white;
 		}
     &__card{
           position: absolute;
